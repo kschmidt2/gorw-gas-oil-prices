@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
             text: null
         },
         data: {
-            googleSpreadsheetKey: '1-p2jXiiozwOOlTTzTCFBQSu6L7g9bOqWJuvTCrLKG-o'
+            googleSpreadsheetKey: '1Hud66_g57ih4UP07Nis_t7MbPUg0_VSNRC8bUGNz3eY'
         },
         plotOptions: {
             series: {
@@ -51,53 +51,68 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         },
         legend: {
-            enabled: false
+            align: 'right',
+            symbolRadius: 0,
+            verticalAlign: 'top',
+            x: 10,
+            itemMarginTop: -10
         },
         xAxis: {
             labels: {
                 style: {
                     whiteSpace: 'nowrap'
                 },
-                format: '{value:%b. %e}'
             },
             tickLength: 5,
-            tickInterval: 7 * 24 * 3600 * 1000
         },
         yAxis: {
             title: false,
             labels: {
                 useHTML: true,
-                overflow: 'allow',
-                format: '{value:.2f}'
+                overflow: 'allow'
             },
-            min: 2.52,
-            max: 2.66,
-            tickAmount: 6
+            tickAmount: 4
         },
         credits: {
             enabled: false
         },
         tooltip: {
             shadow: false,
-            padding: 10
+            padding: 10,
+            valueDecimals: 1,
+            valueSuffix: '%',
+                        formatter: function() {
+                var d = new Date(this.point.x); // The 0 there is the key, which sets the date to the epoch
+
+                console.log(d, this.point.x, this.point.y);
+            }
         },
         annotations: [{
             labels: [{
                 point: {
                     x: 1567814400000, // timestamp
-                    y: 2.5651, // value
+                    y: -9.857323587, // value
                     xAxis: 0, // yAxis INDEX
                     yAxis: 0 // xAxis INDEX
                 },
                 text: 'Attacks in <br> Saudi Arabia',
                 y: -30,
                 shape: 'connector',
-                x: 15   
+                x: 0   
             }],
             shapes: [{
                 point: {
                     x: 1567814400000, // timestamp
-                    y: 2.5651, // value
+                    y: -9.857323587, // value
+                    xAxis: 0, // yAxis INDEX
+                    yAxis: 0 // xAxis INDEX
+                  },
+                type: 'circle',
+                r: 5
+            }, {
+                point: {
+                    x: 1567814400000, // timestamp
+                    y: -20.79487179, // value
                     xAxis: 0, // yAxis INDEX
                     yAxis: 0 // xAxis INDEX
                   },
@@ -116,16 +131,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 },
                 legend: {
                     align: 'left',
-                    x: -18
+                    x: -18,
+                    itemDistance: 12
                 },
                 tooltip: {
                     enabled: false
                 },
-                xAxis: {
-                    labels: {
-                        format: '{value:%m/%d}'
-                    },
-                }
               }
             }]
         }

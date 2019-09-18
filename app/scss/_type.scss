@@ -12,7 +12,7 @@ $font-stack: 'Avenir', 'Avenir Next', 'Arial', sans-serif;
     font-size: 16px;
     line-height: 20px;
     margin-bottom: 20px;
-    max-width: 600px;
+    max-width: 610px;
 }
 
 .chart-title, .chart-title-social {
@@ -62,7 +62,7 @@ $font-stack: 'Avenir', 'Avenir Next', 'Arial', sans-serif;
 
 .chart-source {
     &:before {
-        content: "Source: ";
+        content: "Sources: ";
     }
     float: left;
     @include sm-md-xl {
