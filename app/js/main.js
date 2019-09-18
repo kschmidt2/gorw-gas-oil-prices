@@ -81,11 +81,11 @@ document.addEventListener('DOMContentLoaded', function () {
             padding: 10,
             valueDecimals: 1,
             valueSuffix: '%',
-                        formatter: function() {
-                var d = new Date(this.point.x); // The 0 there is the key, which sets the date to the epoch
+            //             formatter: function() {
+            //     var d = new Date(this.point.x); // The 0 there is the key, which sets the date to the epoch
 
-                console.log(d, this.point.x, this.point.y);
-            }
+            //     console.log(d, this.point.x, this.point.y);
+            // }
         },
         annotations: [{
             labels: [{
