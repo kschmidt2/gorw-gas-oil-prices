@@ -81,6 +81,7 @@ document.addEventListener('DOMContentLoaded', function () {
             padding: 10,
             valueDecimals: 1,
             valueSuffix: '%',
+            shared: true
             //             formatter: function() {
             //     var d = new Date(this.point.x); // The 0 there is the key, which sets the date to the epoch
 
