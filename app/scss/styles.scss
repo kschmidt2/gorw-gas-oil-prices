@@ -68,6 +68,12 @@ $breakpoint-lg: 717px;
       fill: $slate-secondary-5;
     }
   }
+
+  & .highcharts-yaxis-grid {
+    & path:nth-child(3) {
+      stroke: $slate-secondary-6;
+    }
+  }
   
 }
 
